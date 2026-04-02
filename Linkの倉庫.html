@@ -1,0 +1,270 @@
+<!-- リストとナビゲーション -->
+<!DOCTYPE html><!--htmlで記述-->
+<html lang="ja"><!--言語：日本語-->
+
+<head><!--基板部分の記述-->
+	<meta charset="utf-8"><!--文字エンコーディングをutf-8に設定する-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--レンダリングモード(描画モード)の指定-->
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!--サイトの見える範囲の指定-->
+
+    <!--UIタイトルの表示-->
+	<title>linkの倉庫</title><!--ブラウザ上で表示されるタイトル-->
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+
+<style>/*文字のサイズや画面のカラー、サイズの指定≊CSS*/
+    .background {
+        background-color: white;
+    }
+
+    body {
+        padding-top: 50px;
+        width: 1300px;
+        z-index: 0;/*レイヤーの指定。値が小さいほどレイヤーが下に来る*/
+        position: relative;
+    }
+
+    img {/*画像*/
+        height: 40px;
+        width:40px;
+    }
+
+    .starter-template {/*黒枠の背景*/
+        border: solid black 5px;
+        background-color: white;
+        height: 850px;
+        width: 1475px;
+        position: absolute;
+        left: 100px;
+        top: 100px;
+    }
+
+    h1 {/*大見出し*/
+        text-align:center;
+        font-size:50px;
+        font-weight:bold;/*フォントを太字に*/
+        position: absolute;
+        left: 550px;
+        top: 40px;
+        z-index: 100;
+        
+    }
+
+    h2 {/*中見出し*/
+        text-align:center;
+        width:50%;
+        position: absolute;
+        top: 150px;
+        left: 30px;
+    }
+
+    tr {
+        border:solid black 5px;
+        text-align:center;
+    }
+
+    /*表のレイアウト
+    th {
+        font-size:40px;
+        color:red;
+        background-color: lightcyan;
+        text-align:center;
+    }
+
+    td {
+        height:40px;
+        font-size:40px;
+    }
+    */
+
+    .box {/*スクロールボックス左レイアウト*/
+        overflow-y: scroll;
+        font-size:40px;
+        height:580px;
+        width:610px;
+        position: absolute;
+        top: 220px;
+        left: 100px;
+        border: solid 3px black;
+        padding-left: 20px;
+    }
+
+    .box1 {/*スクロールボックス右レイアウト*/
+        overflow-y: scroll;
+        font-size:40px;
+        height:400px;
+        width:650px;
+        position: absolute;
+        top: 220px;
+        left: 760px;
+        border: solid 3px black;
+        padding-left: 20px;
+    }
+
+    .container_1 {/*箇条書きの部分*/
+        font-size: 20px;
+        position: absolute;/*現在地を基準にポジションの調整をする*/
+        top: 710px;/*上から100px*/
+        left: 1050px;/*左から50px*/
+        z-index: 50;
+    }
+
+    .img_a {/*大見出し背景(青)*/
+        position: absolute;
+        left: 500px;
+        top: 150px;
+        z-index: 20;
+        width: 670px;
+        height: 80px;
+    }
+
+    .btn-primary {/*OKボタン*/
+        position: absolute;
+        top: 805px;
+        left: 5px;
+    }
+
+    .navbar-header {/*ナビゲーションバーのサイズ*/
+        width: 200px;
+        height: 50px;
+        position: absolute;
+        left: 100px;
+    }
+
+    .fileselect {/*ファイル選択用のフォーム*/
+        position: absolute;
+        left: 880px;
+        top: 220px;
+        font-size: 20px;
+    }
+
+</style>
+
+<container_2>
+    <img class="img_a" src="file_for_link\background.png"></img>;
+</container_2>
+
+<!--スクロールボックスの中身-->
+<body background="file_for_link\background_blue.jpg"><!--全体背景に使用する画像-->
+    <nav class="navbar navbar-inverse navbar-fixed-top"><!--ナビゲーションバー-->
+        <div class="container"><!--コンテナを作る(元から入っている)-->
+        			<div class="navbar-header"><!--ナビゲーションバー-->
+        				<button type="button" class="navbar-toggle collapsed" 
+                        data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span><!--spanで範囲の指定-->
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        				</button>
+        				<a class="navbar-brand" href="#">Linkの倉庫</a>
+        			</div>
+        			<div id="navbar" class="collapse navbar-collapse">
+        				<ul class="nav navbar-nav">
+        					<li class="active"><a href="#">Home</a></li><!--一番上に飛ぶ-->
+        					<li><a href="#list">List</a></li><!--リストに飛ぶ-->
+        					<li><a href="Linkの倉庫用フォルダ\研究用.html">研究用</a></li>
+                            <!--別のブラウザに飛ぶことも可能-->
+        				</ul>
+        			</div>
+        		</div>
+        	</nav>
+	<div class="container">
+		<div class="starter-template"><!--bootstrapのテンプレ使うよ～って宣言？-->
+			<h1>linkリストの倉庫</h1><!--表題-->
+			<h2 id="list">～～～よく使うリンク～～～</h2><!-- h1=表題、h2=大見出し、h3=中見出し、h4=小見出し-->
+                <div class="box"><!--左のボックスの中身(styleでスクロールさせてる)-->
+                    <img src="file_for_link\Webclass.png"></img>
+                    <a href="https://els.sa.dendai.ac.jp/webclass/login.php" target="_blank">Webclass</a><br>
+                    <img src="file_for_link\電大ユニパ.png" >
+                    <a href="https://portal.sa.dendai.ac.jp/uprx/up/pk/pky001/Pky00101.xhtml" target="_blank">電大ユニパ</a><br>
+                    <img src="file_for_link\Wolfram_Alpha.png" >
+                    <a href="https://ja.wolframalpha.com/" target="_blank">Wolfram Alpha</a><br>
+                    <img src="file_for_link\ChatGPT.png">
+                    <a href="https://chatgpt.com/" target="_blank">ChatGPT</a><br>
+                    <img src="file_for_link\paizaラーニング.png">
+                    <a href="https://paiza.jp/works/mypage" target="_blank">paizaラーニング</a><br>
+                    <img src="file_for_link\Colaboratory.png" >
+                    <a href="https://colab.research.google.com/notebooks/intro.ipynb?hl=ja" target="_blank">Colaboratory</a><br>
+                    <img src="file_for_link\日経テレコン.png" >
+                    <a href="https://www.mrcl.dendai.ac.jp/lib/dbase/nikkeitel" target="_blank">日経テレコン</a><br>
+                    <img src="file_for_link\SPI勉強用linkリストの倉庫.png">
+                    <a href="Linkの倉庫用フォルダ\SPI勉強用のリンク倉庫.html" target="_blank">SPI勉強用linkリストの倉庫</a><br>
+                </div>
+
+                <div class="box1"><!--右のスクロールボックスの中身-->
+                    <img src="file_for_link\電大_蔵書検索.png">
+                    <a href="https://www-uf04.ufinity.jp/tdu_lib/" target="_blank">電大_蔵書検索</a><br>
+                    <img src="file_for_link\Maruzen_eBook_Library.png">
+                    <a href="https://elib.maruzen.co.jp/elib/html/BookListDetail?22" target="_blank">Maruzen_eBook_Library</a><br>
+                    <img src="file_for_link\OCLC_NetLibrary.png">
+                    <a href="https://research.ebsco.com/c/kajwxu/search" target="_blank">OCLC_NetLibrary</a><br>
+                    <img src="file_for_link\川越市立図書館_蔵書検索.png">
+                    <a href="https://www.lib.city.kawagoe.saitama.jp/" target="_blank">川越市立図書館_蔵書検索</a><br>
+                    <img src="file_for_link\さいたま市立図書館_蔵書検索.png">
+                    <a href="https://www.lib.city.saitama.jp/DetailSearch?1" target="_blank">さいたま市立図書館_蔵書検索</a><br>
+                </div>
+			<a class="btn btn-primary" href="#">画面のトップへ戻る</a>
+            </div>
+	</div>
+	<!-- /.container -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<style>/*表でブラウザ上に表示するプログラム
+    <table class="sample_a">
+        <tr><th>アイコン</th><th>サイトのリンク</th></tr>
+        <!--アイコン画像とサイトのリンク、ブラウザ上の表示内容を記述-->
+        <!--
+        Webclass
+        電大ユニパ
+        Wolfram_Alpha
+        ChatGPT
+        paizaラーニング
+        Colaboratory
+        日経テレコン
+        電大_蔵書検索
+        SPI勉強用linkリストの倉庫
+        -->
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\Webclass.png"></td>
+        <td><a href="https://els.sa.dendai.ac.jp/webclass/login.php" target="_blank">Webclass</a></td></tr>
+        <!--<tr>と</tr>で挟むことで表における行のはじめと終わりを示す-->
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\電大ユニパ.png" ></td>
+        <td><a href="https://portal.sa.dendai.ac.jp/uprx/up/pk/pky001/Pky00101.xhtml" target="_blank">電大ユニパ</a></td></tr>
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\Wolfram_Alpha.png" ></td>
+        <td><a href="https://ja.wolframalpha.com/" target="_blank">Wolfram Alpha</a></td></tr>
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\ChatGPT.png"></td>
+        <td><a href="https://chatgpt.com/" target="_blank">ChatGPT</a></td></tr>
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\paizaラーニング.png"></td>
+        <td><a href="https://paiza.jp/works/mypage" target="_blank">paizaラーニング</a></td></tr>
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\Colaboratory.png" ></td>
+        <td><a href="https://colab.research.google.com/notebooks/intro.ipynb?hl=ja" target="_blank">Colaboratory</a></td></tr>
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\日経テレコン.png" ></td>
+        <td><a href="https://www.mrcl.dendai.ac.jp/lib/dbase/nikkeitel" target="_blank">日経テレコン</a></td></tr>
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\電大_蔵書検索.png"></td>
+        <td><a href="https://tdu-lib.mrcl.dendai.ac.jp/" target="_blank">電大_蔵書検索</a></td></tr>
+        <tr><td><img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\SPI勉強用linkリストの倉庫.png"></td>
+        <td><a href="C:\Users\keito\OneDrive - 東京電機大学\html置き場\SPI勉強用のリンク倉庫.html" target="_blank">SPI勉強用linkリストの倉庫</a></td></tr>
+    </table>
+    */</style>
+
+<!--箇条書きでブラウザ上に表示するプログラム
+<div class="container_1">
+    <ul id="list">
+    <script>
+        var link = [];
+        link[0] = "年";
+        link[1] = "月";
+        link[2] = "日";
+        for (var i=0; i<link.length; i++){/*変数iを0から配列linkの長さまでforループ*/
+            var link_a = document.createElement('li');/*liタグを作成、link_aに代入*/
+            link_a.textContent = link[i];/*link_aのテキスト内容としてlink[i]の内容を代入*/
+            document.getElementById('list').appendChild(link_a);/*listって名前のulタグの要素を取得する。.←で取得した要素の子要素として変数link_aを挿入*/
+        }
+    </script>
+    </ul>
+</div>

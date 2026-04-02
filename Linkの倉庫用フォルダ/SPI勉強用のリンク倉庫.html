@@ -1,0 +1,114 @@
+<!-- リストとナビゲーション -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=0.7">
+
+    <!--タイトルの表示-->
+	<title>SPI勉強用のリンク倉庫</title>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+	<style>
+		body {
+			padding-top: 50px;
+		}
+
+		.starter-template {
+			padding: 40px 15px;
+			background-color: white;
+		}
+
+		.responsive-image {
+			max-width: 100%;
+			height: auto;
+		}
+
+		h2 {
+			color: orange;
+		}
+
+		ul {
+			padding: 0;
+			position: relative;
+		}
+
+		ul li {
+			color: blue;
+			border-left: solid 6px blue;/*左側の線*/
+			background: lightgray;/*背景*/
+			margin-bottom: 3px;/*下のバーと余白*/
+			line-height: 1.5;
+			padding: 0.5em;
+			list-style-type: none/*ポチ消す*/
+		}
+	</style>
+</head>
+
+<body background="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\background_blue.jpg">
+    <nav class="navbar navbar-inverse navbar-fixed-top"><!--ナビゲーションバー-->
+        <div class="container">
+        			<div class="navbar-header">
+        				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        					<span class="sr-only">Toggle navigation</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        				</button>
+        				<a class="navbar-brand" href="#">Project Nyaan</a>
+        			</div>
+        			<div id="navbar" class="collapse navbar-collapse">
+        				<ul class="nav navbar-nav">
+        					<li class="active"><a href="#">Home</a></li><!--一番上に飛ぶ-->
+        					<li><a href="#list">List</a></li><!--リストに飛ぶ-->
+        					<li><a href="">Table</a></li>
+        				</ul>
+        			</div>
+        		</div>
+        	</nav>
+	<div class="container">
+		<div class="starter-template">
+			<h1>　SPI勉強用linkリストの倉庫</h1>
+			<h2 id="list">　↓～～～～～  Linkリスト(^^)ﾉｼ  ～～～～～↓</h2><!-- h1=表題、h2=大見出し、h3=中見出し、h4=小見出し-->
+			<ul><!--箇条書きのリストを作る、classは枠線-->
+                <li>                    
+                    <a href="https://www.weblio.jp/" target="_blank">
+                        <img src="https://th.bing.com/th?id=ODLS.6fc6f41f-910a-4b96-a973-492540204b53&w=32&h=32&qlt=91&
+						pcl=fffffa&o=6&pid=1.2" alt="国語辞典の画像" class="responsive-image" height="40">
+                        <p class="lead">weblio国語辞典</p>
+                    </a>
+                </li>
+			    <li>
+                    <a href="https://ejje.weblio.jp/" target="_blank">
+                        <img src="https://th.bing.com/th?id=ODLS.4c591526-812c-48a1-82ca-4eb291b94b9b&w=32&h=32&qlt=99&p
+						cl=fffffa&o=6&pid=1.2" alt="英語辞典の画像" height="40">
+                        <p class="lead">weblio英語辞典</p>
+                    </a>
+                </li>
+			</ul>
+			<a class="btn btn-primary" href="#">OK</a>
+		</div>
+	</div>
+	<!-- /.container -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<form>
+	<select name="fruit" required>
+		<option value="">選択してください</option>
+		<option value="apple">リンゴ</option>
+		<option value="orange">オレンジ</option>
+		<option value="banana">バナナ</option>
+		<option value="grapes">ぶどう</option>
+		<option value="melon">メロン</option>
+	</select>
+	<button type="submit">送信</button>
+	</form>
+</body>
+
+
+</html>
