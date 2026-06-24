@@ -1,91 +1,111 @@
-<!DOCTYPE html><!--htmlで記述-->
-<html lang="ja"><!--言語：日本語-->
+<!DOCTYPE html>
+<html lang="ja">
 
-<head><!--基板部分の記述-->
-	<meta charset="utf-8"><!--文字エンコーディングをutf-8に設定する-->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><!--レンダリングモード(描画モード)の指定-->
-	<meta name="viewport" content="width=device-width, initial-scale=1"><!--サイトの見える範囲の指定-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>研究用 - linkの倉庫</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-    <!--UIタイトルの表示-->
-	<title>linkの倉庫</title><!--ブラウザ上で表示されるタイトル-->
-	<!-- Bootstrap -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 60px;
+            background-color: #e8f4f8;
+        }
 
+        .page-title {
+            text-align: center;
+            font-size: clamp(24px, 5vw, 50px);
+            font-weight: bold;
+            margin: 20px 0 20px;
+        }
+
+        .section-box {
+            background: white;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background: white;
+            border-left: 5px solid #337ab7;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            font-size: clamp(14px, 2.5vw, 18px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: background 0.2s;
+        }
+
+        .link-card:hover,
+        .link-card:focus {
+            background: #eaf3fb;
+            text-decoration: none;
+            color: #1a5276;
+        }
+
+        .link-card img {
+            width: 36px;
+            height: 36px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin: 20px auto 30px;
+            width: 160px;
+        }
+    </style>
 </head>
 
-<style>/*画面のサイズ横は1260px程*/
-    .starter-template {/*グレーの背景*/
-        background-color: lightgray;
-        height: 800px;
-        width: 1100px;
-        position: absolute;
-        left: 80px;
-        top: 100px;
-    }
-
-    .container_nav {/*ナビゲーションバーのサイズ*/
-        width: 500px;
-        height: 50px;
-        position: absolute;
-        left: 100px;
-    }
-
-	.box{/*スクロールボックスのレイアウト*/
-		padding-left: 5px;
-		padding-top: 5px;
-		position: absolute;
-		top: 220px;
-		left: 170px;
-		width: 310px;
-		height: 330px;
-		font-size: 20px;
-		border: solid black 3px;
-	}
-
-	img {/*スクロールボックス内の画像サイズ*/
-		width: 40px;
-		height: 40px;
-	}
-
-	h1 {/*大見出し*/
-        text-align:center;
-        font-size:50px;
-        font-weight:bold;/*フォントを太字に*/
-        position: absolute;
-        left: 550px;
-        top: 100px;
-        z-index: 100; 
-    }
-</style>
-
-<body background><!--全体背景に使用する画像-->
-    <nav class="navbar navbar-inverse navbar-fixed-top"><!--ナビゲーションバー-->
-        <div class="container_nav"><!--コンテナを作る(元から入っている)-->
-        			<div class="navbar-header"><!--ナビゲーションバー-->
-        				<button type="button" class="navbar-toggle collapsed" 
-                        data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        					<span class="sr-only">Toggle navigation</span>
-        					<span class="icon-bar"></span><!--spanで範囲の指定-->
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>
-        				</button>
-        				<a class="navbar-brand" href="#">研究用</a>
-        			</div>
-        			<div id="navbar" class="collapse navbar-collapse">
-        				<ul class="nav navbar-nav">
-        					<li class="active"><a href="#">Home</a></li><!--一番上に飛ぶ-->
-        					<li><a href="C:\Users\keito\OneDrive - 東京電機大学\html置き場\Linkの倉庫.html">Linkの倉庫</a></li><!--リストに飛ぶ-->
-                            <!--別のブラウザに飛ぶことも可能-->
-        				</ul>
-        			</div>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">研究用</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="../Linkの倉庫.html">Linkの倉庫</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-	<h1>研究用</h1><!--表題-->
-	<div class="starter-template"></div>
-	<div class="box"><!--スクロールできるボックスに入れたよ～の意味-->
-		<img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\Google_Scholar.png"></img>
-		<a href=https://scholar.google.jp/ target="_blank">Google_Scholar</a><br>
-		<img src="C:\Users\keito\OneDrive - 東京電機大学\html置き場\file_for_link\医用工学の基礎.png"></img>
-		<a href=https://elib.maruzen.co.jp/elib/html/BookDetail/Id/3000076508 target="_blank">医用工学の基礎</a><br>
+
+    <div class="container">
+        <h1 class="page-title">研究用</h1>
+
+        <div class="section-box">
+            <a class="link-card" href="https://scholar.google.jp/" target="_blank">
+                <img src="../file_for_link/Google_Scholar.png" alt="">Google Scholar
+            </a>
+            <a class="link-card" href="https://elib.maruzen.co.jp/elib/html/BookDetail/Id/3000076508" target="_blank">
+                <img src="../file_for_link/医用工学の基礎.png" alt="">医用工学の基礎
+            </a>
+        </div>
+
+        <a class="btn btn-primary back-to-top" href="#">画面のトップへ戻る</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
